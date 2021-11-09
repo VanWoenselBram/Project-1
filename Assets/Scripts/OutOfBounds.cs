@@ -14,16 +14,7 @@ public class OutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inBounds == false)
-        {
-            Destroy(gameObject);
-        }
+        
     }
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Zijkant"))
-        {
-            inBounds = false;
-        }
-    }
+
 }
