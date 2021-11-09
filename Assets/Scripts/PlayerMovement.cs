@@ -46,11 +46,23 @@ public class PlayerMovement : MonoBehaviour
         {
             Schiet();
         }
+        if (player.transform.position.x > Xkant1 || player.transform.position.x < Xkant2)
+        {
+            BuitenX = true;
+        }
+        if (player.transform.position.z > Zkant1 || player.transform.position.z < Zkant2)
+        {
+            BuitenZ = true;
+        }
+        if (BuitenX || BuitenZ)
+        {
+            SceneManager.LoadScene("Defeat");
+        }
     }
-    public void OnTriggerEnter(Collision other)
+    public void OnCollisionEnter(Collision other)
     {
         
-        if (other.collider.CompareTag("Obstacle"))
+        if (other.collider.CompareTag("Obstacle") || other.collider.CompareTag("Boss"))
         {
             SceneManager.LoadScene("Defeat");
         }

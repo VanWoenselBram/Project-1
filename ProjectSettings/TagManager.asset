@@ -10,6 +10,7 @@ TagManager:
   - NextLVL
   - Victory
   - Boss
+  - Zijkant
   layers:
   - Default
   - TransparentFX
