@@ -19,13 +19,6 @@ public class OutOfBounds : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Zijkant"))
-        {
-            inBounds = true;
-        }
-    }
     public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Zijkant"))
