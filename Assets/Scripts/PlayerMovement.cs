@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody playerRB;
     public GameObject player;
     public Camera spelerCamera;
-    public Hp hp;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var scene = SceneManager.GetSceneAt(0);
         Draai = Input.GetAxis("Horizontal");
         VoorAchter = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * VoorAchter * Time.deltaTime * Speed);
@@ -41,10 +39,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerRB.AddForce(Vector3.up * jumpPower);
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            Schiet();
         }
         if (player.transform.position.x > Xkant1 || player.transform.position.x < Xkant2)
         {
@@ -61,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnCollisionEnter(Collision other)
     {
-        
         if (other.collider.CompareTag("Obstacle") || other.collider.CompareTag("Boss"))
         {
             SceneManager.LoadScene("Defeat");
@@ -72,18 +65,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Schiet()
-    { 
-        RaycastHit schot;
-        Physics.Raycast(spelerCamera.transform.position, spelerCamera.transform.forward, out schot);
-        Collider collider = schot.collider;
-        if (collider.CompareTag("Obstacle"))
-        {
-            Destroy(collider.gameObject);
-        }
-        else if (collider.gameObject.CompareTag("Boss"))
-        {
-            hp.loseHP(0.01f);
-        }
-    }
+    
 }
