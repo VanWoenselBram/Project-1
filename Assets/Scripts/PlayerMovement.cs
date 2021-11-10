@@ -64,6 +64,4 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("Victory Screen");
         }
     }
-
-    
 }
