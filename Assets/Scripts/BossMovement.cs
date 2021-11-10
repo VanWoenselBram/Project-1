@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;   
 
 public class BossMovement : MonoBehaviour
 {
@@ -43,7 +43,7 @@ public class BossMovement : MonoBehaviour
         else
         {
             Beweeg = true;
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(5f);
             wachten = false;
         }
     }
