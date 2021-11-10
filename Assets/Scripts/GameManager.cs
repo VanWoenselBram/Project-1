@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    float Tijd = 120;
+    public float Tijd = 120;
 
     public TMP_Text tijdOver; 
     

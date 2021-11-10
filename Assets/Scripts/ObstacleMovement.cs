@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleMovement : MonoBehaviour
 {
     public GameObject player;
-    public int Speed = 4;
+    private int Speed = 4;
     // Start is called before the first frame update
     void Start()
     {

@@ -39,7 +39,7 @@ public class EnemySpawn : MonoBehaviour
         else
         {
             Spawn = true;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3.2f);
             Spawning = false;
         }
     }
