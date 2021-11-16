@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Schiet : MonoBehaviour
 {
-
+    public bool PowerUp = false;
     public Camera spelerCamera;
     public Hp hp;
     // Start is called before the first frame update
@@ -33,6 +33,14 @@ public class Schiet : MonoBehaviour
         else if (collider.gameObject.CompareTag("Boss"))
         {
             hp.loseHP(0.01f);
+        }
+        else if (collider.gameObject.CompareTag("SterkObstacle") && PowerUp)
+        { 
+            Destroy(collider.gameObject);
+        }
+        else if (collider.gameObject.CompareTag("Enemy"))
+        {
+            hp.loseHP(0.34f);
         }
     }
 }

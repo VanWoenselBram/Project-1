@@ -11,6 +11,7 @@ TagManager:
   - Victory
   - Boss
   - Zijkant
+  - SterkObstacle
   layers:
   - Default
   - TransparentFX
