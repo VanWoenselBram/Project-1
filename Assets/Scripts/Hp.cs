@@ -21,7 +21,7 @@ public class Hp : MonoBehaviour
     void Update()
     {
         hp.value = hpValue;
-        if (hp.value == hp.minValue || hpValue <= 0)
+        if (hp.value == hp.minValue)
         {
             SceneManager.LoadScene("Victory Screen");
         }
