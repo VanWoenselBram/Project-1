@@ -23,7 +23,7 @@ public class OutOfBounds : MonoBehaviour
         {
             BuitenZ = true;
         }
-        if (gameObject.transform.position.x > Xkant1 || gameObject.transform.position.x < Xkant2)
+        else if (gameObject.transform.position.x > Xkant1 || gameObject.transform.position.x < Xkant2)
         {
             BuitenX = true;
         }

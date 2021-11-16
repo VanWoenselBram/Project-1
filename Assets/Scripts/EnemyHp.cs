@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PowerUp : MonoBehaviour
+public class EnemyHp : MonoBehaviour
 {
-    public Schiet schiet;
+    public Hp hp;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +15,9 @@ public class PowerUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnTriggerEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if (hp.hpValue < 0f)
         {
-            schiet.PowerUp = true;
+            SceneManager.LoadScene("Victory Screen");
         }
     }
 }

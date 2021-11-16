@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject player;
     public Camera spelerCamera;
 
+    public Schiet schiet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,14 @@ public class PlayerMovement : MonoBehaviour
         else if (other.collider.CompareTag("Victory"))
         {
             SceneManager.LoadScene("Victory Screen");
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PowerUp"))
+        {
+            schiet.PowerUp = true;
+            Destroy(other.gameObject);
         }
     }
 }
