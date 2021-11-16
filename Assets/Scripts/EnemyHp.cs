@@ -15,9 +15,9 @@ public class EnemyHp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp.hpValue < 0f)
-        {
-            SceneManager.LoadScene("Victory Screen");
-        }
+      //  if (hp.hpValue < 0f)
+        //{
+        //    SceneManager.LoadScene("Victory Screen");
+        //}
     }
 }
