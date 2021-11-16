@@ -25,10 +25,6 @@ public class Hp : MonoBehaviour
         {
             SceneManager.LoadScene("Victory Screen");
         }
-        if (hpValue < 0f)
-        {
-            SceneManager.LoadScene("Victory Screen");
-        }
     }
 
     public void loseHP(float dmg)
