@@ -34,9 +34,5 @@ public class Schiet : MonoBehaviour
         {
             hp.loseHP(0.01f);
         }
-        else if (collider.gameObject.CompareTag("Enemy"))
-        {
-            hp.loseHP(0.5f);
-        }
     }
 }
