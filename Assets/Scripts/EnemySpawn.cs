@@ -24,7 +24,6 @@ public class EnemySpawn : MonoBehaviour
         {
             Spawning = true;
             StartCoroutine(SpawnEnemy());
-
         }
     }
 
@@ -39,7 +38,7 @@ public class EnemySpawn : MonoBehaviour
         else
         {
             Spawn = true;
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(2.6f);
             Spawning = false;
         }
     }
