@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
     float Zkant2 = 760;
     float Xkant1 = 270;
     float Xkant2 = 65;
-    float Yspring;
 
     public Rigidbody playerRB;
     public GameObject player;
@@ -30,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GameObject.Find("Player");
         playerRB = player.GetComponent<Rigidbody>();
-        Yspring = 0.5f;
     }
 
     // Update is called once per frame
