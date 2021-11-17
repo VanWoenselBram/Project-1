@@ -725,6 +725,7 @@ MonoBehaviour:
   playerRB: {fileID: 1443571556}
   player: {fileID: 1443571550}
   spelerCamera: {fileID: 1045599416}
+  schiet: {fileID: 0}
 --- !u!135 &1443571552
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -828,6 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9970f95fe90192a4fa221ac895139b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerUp: 0
   spelerCamera: {fileID: 1045599416}
   hp: {fileID: 1492093609}
 --- !u!1 &1492093608

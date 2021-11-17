@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Schiet : MonoBehaviour
 {
+
     public bool PowerUp = false;
+
     public Camera spelerCamera;
     public Hp hp;
     // Start is called before the first frame update
