@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     float Zkant2 = 760;
     float Xkant1 = 270;
     float Xkant2 = 65;
+    float Yspring;
 
     public Rigidbody playerRB;
     public GameObject player;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GameObject.Find("Player");
         playerRB = player.GetComponent<Rigidbody>();
+        Yspring = player.transform.position.y;
     }
 
     // Update is called once per frame
@@ -38,9 +40,12 @@ public class PlayerMovement : MonoBehaviour
         VoorAchter = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * VoorAchter * Time.deltaTime * Speed);
         transform.Rotate(Vector3.up * Time.deltaTime * TurnSpeed * Draai);
-        if (Input.GetKeyDown(KeyCode.Space))
+        while (player.transform.position.y == Yspring)
         {
-            playerRB.AddForce(Vector3.up * jumpPower);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerRB.AddForce(Vector3.up * jumpPower);
+            }
         }
         if (player.transform.position.x > Xkant1 || player.transform.position.x < Xkant2)
         {
