@@ -34,7 +34,15 @@ public class Schiet : MonoBehaviour
         }
         else if (collider.gameObject.CompareTag("Boss"))
         {
-            hp.loseHP(0.01f);
+            if (PowerUp == true)
+            {
+                hp.loseHP(0.5f);
+            }
+            else
+            {
+                hp.loseHP(0.01f);
+            }
+            
         }
         else if (collider.gameObject.CompareTag("SterkObstacle") && PowerUp)
         { 

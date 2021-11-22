@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class OutOfBounds : MonoBehaviour
 {
-    float Zkant1 = 965;
-    float Zkant2 = 760;
-    float Xkant1 = 270;
-    float Xkant2 = 65;
+    float Zkant1 = 960;
+    float Zkant2 = 750;
+    float Xkant1 = 260;
+    float Xkant2 = 60;
 
     bool BuitenZ = false;
     bool BuitenX = false;
