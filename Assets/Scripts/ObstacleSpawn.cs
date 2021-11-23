@@ -28,7 +28,7 @@ public class ObstacleSpawn : MonoBehaviour
     IEnumerator SpawnEnemy()
     {
         int Z = Random.Range(840, 910);
-        Vector3 Pos = new Vector3(268, 0, Z);
+        Vector3 Pos = new Vector3(255, 0, Z);
         if (Spawn)
         {
             Instantiate(obstacle, Pos, rotation.transform.rotation);
