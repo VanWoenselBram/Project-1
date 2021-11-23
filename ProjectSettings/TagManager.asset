@@ -13,6 +13,7 @@ TagManager:
   - Zijkant
   - SterkObstacle
   - PowerUp
+  - PowerUp2
   layers:
   - Default
   - TransparentFX

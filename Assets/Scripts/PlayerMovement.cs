@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Draai;
     public float VoorAchter;
+
     bool BuitenZ = false;
     bool BuitenX = false;
+    bool Pow2Up = false;
 
     public float Speed = 10;
     private float TurnSpeed = 150;
@@ -41,7 +43,14 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerRB.AddForce(Vector3.up * jumpPower);
+            if (Pow2Up)
+            {
+                playerRB.AddForce(Vector3.up * 3 * jumpPower);
+            }
+            else
+            {
+                playerRB.AddForce(Vector3.up * jumpPower);
+            }
         }
         
         if (player.transform.position.x > Xkant1 || player.transform.position.x < Xkant2)
@@ -75,5 +84,16 @@ public class PlayerMovement : MonoBehaviour
             schiet.PowerUp = true;
             Destroy(other.gameObject);
         }
+        else if (other.gameObject.CompareTag("PowerUp2"))
+        {
+            Pow2Up = true;
+            Destroy(other.gameObject);
+            StartCoroutine(PoweredUp());
+        }
+    }
+    IEnumerator PoweredUp()
+    {
+        yield return new WaitForSeconds(10f);
+        Pow2Up = false;
     }
 }

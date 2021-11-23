@@ -757,7 +757,7 @@ Transform:
   m_GameObject: {fileID: 1208030348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 141.69, y: 0.48, z: 826}
-  m_LocalScale: {x: 1, y: 1, z: 20}
+  m_LocalScale: {x: 1, y: 4, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 1442071924}
   m_Layer: 0
   m_Name: Victory Point
-  m_TagString: Untagged
+  m_TagString: Victory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1160,7 +1160,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442071923}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -1942,6 +1942,7 @@ MonoBehaviour:
   playerRB: {fileID: 0}
   player: {fileID: 0}
   spelerCamera: {fileID: 0}
+  schiet: {fileID: 0}
 --- !u!135 &1934368070
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2263,6 +2264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b3f0f46e2519147bb1662b939f4fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tijd: 120
   tijdOver: {fileID: 1766158356}
 --- !u!114 &2128610368
 MonoBehaviour:
@@ -2437,3 +2439,77 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1137630720375478618
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1111431232356008555, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_Name
+      value: PU2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368832766502930379, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 137.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 830.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773338707643971670, guid: 17066547987663e4a92a687a44131c0a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17066547987663e4a92a687a44131c0a, type: 3}
