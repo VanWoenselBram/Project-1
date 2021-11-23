@@ -16,9 +16,7 @@ public class PowerUpSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 StartPos = new Vector3(Random.Range(Xkant2, Xkant1), 2, Random.Range(Zkant2, Zkant1));
-        Instantiate(PowerUp2, StartPos, PowerUp2.transform.rotation);
-        Instantiate(PowerUp, StartPos, PowerUp.transform.rotation);
+
     }
 
     // Update is called once per frame
