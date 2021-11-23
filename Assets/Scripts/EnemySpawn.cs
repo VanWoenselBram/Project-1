@@ -6,8 +6,11 @@ public class EnemySpawn : MonoBehaviour
 {
     public bool Spawn = true;
     public bool Spawning = false;
+
     public GameObject Boss;
     public GameObject obstacle;
+    public GameObject obstacle2;
+
     public Hp hp;
 
 
@@ -20,10 +23,15 @@ public class EnemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp.hpValue <= 0.75 && !Spawning)
+        if (hp.hpValue <= 0.75 && !Spawning && hp.hpValue > 0.3f)
         {
             Spawning = true;
             StartCoroutine(SpawnEnemy());
+        }
+        if (hp.hpValue <= 0.3f && !Spawning)
+        {
+            Spawning = true;
+            StartCoroutine(SpawnStrongEnemy());
         }
     }
 
@@ -39,6 +47,21 @@ public class EnemySpawn : MonoBehaviour
         {
             Spawn = true;
             yield return new WaitForSeconds(2.7f);
+            Spawning = false;
+        }
+    }
+    IEnumerator SpawnStrongEnemy()
+    {
+        if (Spawn)
+        {
+            Instantiate(obstacle2, Boss.transform.position, Boss.transform.rotation);
+            Spawn = false;
+            Spawning = false;
+        }
+        else
+        {
+            Spawn = true;
+            yield return new WaitForSeconds(2f);
             Spawning = false;
         }
     }

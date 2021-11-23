@@ -399,6 +399,50 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &435471589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435471591}
+  - component: {fileID: 435471590}
+  m_Layer: 0
+  m_Name: PowUpSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &435471590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435471589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a989fe92e4e041442a00d20b997d2543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerUp: {fileID: 6808482966627820016, guid: 6029cb64d27a52446bf017a511f4a182, type: 3}
+--- !u!4 &435471591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435471589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 78.75558, y: 2.113589, z: 893.5309}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &852556639
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +769,7 @@ MonoBehaviour:
   playerRB: {fileID: 1443571556}
   player: {fileID: 1443571550}
   spelerCamera: {fileID: 1045599416}
-  schiet: {fileID: 0}
+  schiet: {fileID: 1443571557}
 --- !u!135 &1443571552
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -976,6 +1020,8 @@ MonoBehaviour:
   Spawning: 0
   Boss: {fileID: 1492093608}
   obstacle: {fileID: 8546486533312400224, guid: e148d44e5ff7f00469219b107e7a3802,
+    type: 3}
+  obstacle2: {fileID: 5452147412903188903, guid: 5ae590c572acf504487a660a8c48203b,
     type: 3}
   hp: {fileID: 1492093609}
 --- !u!114 &1492093616

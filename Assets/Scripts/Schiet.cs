@@ -18,6 +18,10 @@ public class Schiet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PowerUp == true)
+        {
+            StartCoroutine(PoweredUp());
+        }
         if (Input.GetMouseButtonDown(0))
         {
             schiet();
@@ -36,7 +40,7 @@ public class Schiet : MonoBehaviour
         {
             if (PowerUp == true)
             {
-                hp.loseHP(0.5f);
+                hp.loseHP(0.05f);
             }
             else
             {
@@ -52,5 +56,10 @@ public class Schiet : MonoBehaviour
         {
             hp.loseHP(0.334f);
         }
+    }
+    IEnumerator PoweredUp()
+    {
+        yield return new WaitForSeconds(2f);
+        PowerUp = false;
     }
 }

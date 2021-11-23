@@ -15,8 +15,7 @@ public class PowerUpSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 Pos = new Vector3(Random.Range(Xkant2, Xkant1), 2, Random.Range(Zkant2, Zkant1));
-        Instantiate(PowerUp, Pos, PowerUp.transform.rotation);
+        
     }
 
     // Update is called once per frame
@@ -24,13 +23,15 @@ public class PowerUpSpawn : MonoBehaviour
     {
         if (Spawn == false)
         {
-            SpawnPowUp();
+            StartCoroutine(SpawnPowUp());
         }
     }
 
     IEnumerator SpawnPowUp()
     {
-        Spawn = true;
+        Spawn = true; 
+        Vector3 Pos = new Vector3(Random.Range(Xkant2, Xkant1), 2, Random.Range(Zkant2, Zkant1));
+        Instantiate(PowerUp, Pos, PowerUp.transform.rotation);
         yield return new WaitForSeconds(15);
         Spawn = false;
     }
