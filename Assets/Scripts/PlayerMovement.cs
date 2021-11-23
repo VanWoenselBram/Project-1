@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnCollisionEnter(Collision other)
     {
-        if (other.collider.CompareTag("Obstacle") || other.collider.CompareTag("Boss"))
+        if (other.collider.CompareTag("Obstacle") || other.collider.CompareTag("Boss") || other.collider.CompareTag("SterkObstacle"))
         {
             SceneManager.LoadScene("Defeat");
         }
