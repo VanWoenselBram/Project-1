@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ObstacleSpawn : MonoBehaviour
 {
-
     public GameObject obstacle;
     public GameObject rotation;
 
     bool Spawn;
     bool Spawning = false;
+
     // Start is called before the first frame update
     void Start()
     {

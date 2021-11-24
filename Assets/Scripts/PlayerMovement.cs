@@ -5,23 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float Draai;
-    public float VoorAchter;
-
     bool BuitenZ = false;
     bool BuitenX = false;
     bool Pow2Up = false;
 
-    public float Speed = 10;
-    private float TurnSpeed = 200;
-    public float jumpPower = 300;
     float Zkant1 = 965;
     float Zkant2 = 760;
     float Xkant1 = 270;
     float Xkant2 = 65;
+    public float Draai;
+    public float VoorAchter;
+    public float Speed = 10;
+    public float jumpPower = 300;
+    private float TurnSpeed = 200;
 
     public Rigidbody playerRB;
+
     public GameObject player;
+
     public Camera spelerCamera;
 
     public Schiet schiet;

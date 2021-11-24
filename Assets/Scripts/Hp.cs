@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class Hp : MonoBehaviour
 {
     public GameObject hpBar;
+
     public Slider hp;
+
     public float hpValue = 1;
 
     // Start is called before the first frame update

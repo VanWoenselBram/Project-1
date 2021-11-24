@@ -11,6 +11,7 @@ public class OutOfBounds : MonoBehaviour
 
     bool BuitenZ = false;
     bool BuitenX = false;
+
     // Start is called before the first frame update
     void Start()
     {

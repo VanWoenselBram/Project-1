@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tijdOver.text = Tijd.ToString();
+        tijdOver.text = Tijd.ToString("0");
         Tijd -= Time.deltaTime;
         if (Tijd < 0)
         {

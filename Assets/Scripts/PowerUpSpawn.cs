@@ -12,10 +12,14 @@ public class PowerUpSpawn : MonoBehaviour
     bool Spawn = false;
 
     public GameObject[] PowUps;
+
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        Instantiate(PowUps[0], player.transform.position, player.transform.rotation);
+        Instantiate(PowUps[1], player.transform.position, player.transform.rotation);
     }
 
     // Update is called once per frame

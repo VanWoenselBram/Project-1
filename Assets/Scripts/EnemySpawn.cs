@@ -13,7 +13,6 @@ public class EnemySpawn : MonoBehaviour
 
     public Hp hp;
 
-
     // Start is called before the first frame update
     void Start()
     {

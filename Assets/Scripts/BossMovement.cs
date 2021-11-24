@@ -14,6 +14,7 @@ public class BossMovement : MonoBehaviour
 
     public Hp hp;
     public GameObject Boss;
+
     // Start is called before the first frame update
     void Start()
     {
