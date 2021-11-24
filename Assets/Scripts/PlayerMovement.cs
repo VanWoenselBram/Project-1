@@ -9,23 +9,31 @@ public class PlayerMovement : MonoBehaviour
     bool BuitenX = false;
     bool Pow2Up = false;
 
+
     float Zkant1 = 965;
     float Zkant2 = 760;
     float Xkant1 = 270;
     float Xkant2 = 65;
+
     public float Draai;
     public float VoorAchter;
     public float Speed = 10;
     public float jumpPower = 300;
+
     private float TurnSpeed = 200;
+
 
     public Rigidbody playerRB;
 
+
     public GameObject player;
+
 
     public Camera spelerCamera;
 
+
     public Schiet schiet;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +45,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Draai = Input.GetAxis("Horizontal");
         VoorAchter = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * VoorAchter * Time.deltaTime * Speed);
+
+        Draai = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up * Time.deltaTime * TurnSpeed * Draai);
         
         if (Input.GetKeyDown(KeyCode.Space))
@@ -58,10 +67,12 @@ public class PlayerMovement : MonoBehaviour
         {
             BuitenX = true;
         }
+
         if (player.transform.position.z > Zkant1 || player.transform.position.z < Zkant2)
         {
             BuitenZ = true;
         }
+
         if (BuitenX || BuitenZ)
         {
             SceneManager.LoadScene("Defeat");
