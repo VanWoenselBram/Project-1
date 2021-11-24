@@ -11,8 +11,7 @@ public class PowerUpSpawn : MonoBehaviour
 
     bool Spawn = false;
 
-    public GameObject PowerUp;
-    public GameObject PowerUp2;
+    public GameObject[] PowUps;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +29,16 @@ public class PowerUpSpawn : MonoBehaviour
 
     IEnumerator SpawnPowUp()
     {
-        int i = Random.Range(1, 3);
+        int i = Random.Range(0, 2);
         Spawn = true; 
         Vector3 Pos = new Vector3(Random.Range(Xkant2, Xkant1), 2, Random.Range(Zkant2, Zkant1));
-        if (i == 1)
+        if (i == 0)
         {
-            Instantiate(PowerUp, Pos, PowerUp.transform.rotation);
+            Instantiate(PowUps[i], Pos, PowUps[i].transform.rotation);
         }
-        else if (i == 2)
+        else if (i == 1)
         {
-            Instantiate(PowerUp2, Pos, PowerUp2.transform.rotation);
+            Instantiate(PowUps[i], Pos, PowUps[i].transform.rotation);
         }
         yield return new WaitForSeconds(10);
         Spawn = false;

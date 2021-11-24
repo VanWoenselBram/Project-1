@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     bool Pow2Up = false;
 
     public float Speed = 10;
-    private float TurnSpeed = 150;
+    private float TurnSpeed = 200;
     public float jumpPower = 300;
     float Zkant1 = 965;
     float Zkant2 = 760;
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Pow2Up)
             {
-                playerRB.AddForce(Vector3.up * 3 * jumpPower);
+                playerRB.AddForce(Vector3.up * 2 * jumpPower);
             }
             else
             {

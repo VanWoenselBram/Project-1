@@ -428,9 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a989fe92e4e041442a00d20b997d2543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUp: {fileID: 6808482966627820016, guid: 6029cb64d27a52446bf017a511f4a182, type: 3}
-  PowerUp2: {fileID: 1111431232356008555, guid: 17066547987663e4a92a687a44131c0a,
-    type: 3}
+  PowUps:
+  - {fileID: 6808482966627820016, guid: 6029cb64d27a52446bf017a511f4a182, type: 3}
+  - {fileID: 1111431232356008555, guid: 17066547987663e4a92a687a44131c0a, type: 3}
 --- !u!4 &435471591
 Transform:
   m_ObjectHideFlags: 0
