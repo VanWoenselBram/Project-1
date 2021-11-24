@@ -14,6 +14,7 @@ TagManager:
   - SterkObstacle
   - PowerUp
   - PowerUp2
+  - Light
   layers:
   - Default
   - TransparentFX
