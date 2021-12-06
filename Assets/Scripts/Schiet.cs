@@ -60,7 +60,7 @@ public class Schiet : MonoBehaviour
     }
     IEnumerator PoweredUp()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(4f);
         PowerUp = false;
     }
 }

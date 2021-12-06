@@ -22,7 +22,7 @@ public class EnemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp.hpValue <= 0.75 && !Spawning && hp.hpValue > 0.3f)
+        if (hp.hpValue <= 0.75f && !Spawning && hp.hpValue > 0.35f)
         {
             Spawning = true;
             StartCoroutine(SpawnEnemy());
