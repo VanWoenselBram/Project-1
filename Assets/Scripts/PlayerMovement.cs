@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     bool BuitenZ = false;
     bool BuitenX = false;
     bool Pow2Up = false;
-
+    bool BoostMenu = false;
 
     float Zkant1 = 965;
     float Zkant2 = 760;
@@ -22,15 +22,13 @@ public class PlayerMovement : MonoBehaviour
 
     private float TurnSpeed = 200;
 
+    public GameObject Boosts;
 
     public Rigidbody playerRB;
 
-
     public GameObject player;
 
-
     public Camera spelerCamera;
-
 
     public Schiet schiet;
 
@@ -76,6 +74,20 @@ public class PlayerMovement : MonoBehaviour
         if (BuitenX || BuitenZ)
         {
             SceneManager.LoadScene("Defeat");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (BoostMenu)
+            {
+                Boosts.SetActive(false);
+                BoostMenu = false;
+            }
+            else
+            {
+                Boosts.SetActive(true);
+                BoostMenu = true;
+            }
         }
     }
     public void OnCollisionEnter(Collision other)
